@@ -1,0 +1,13 @@
+<h2>Categores</h2>
+<ul>
+    {% for category in categorys %}
+    <li><a href="{% url blog.views.sorted "category",category.slug %}">{{category}}</a> ({{ category.post_set.all.count }})</li>
+    {% endfor %}
+
+</ul>
+<h2>Tags</h2>
+<ul>
+{% for tag in tags %}
+<li><a href="{% url blog.views.sorted "tag", tag.slug%}">{{ tag }}</a> ({{ tag.post_set.all.count}})</li>
+{% endfor %}
+</ul>
