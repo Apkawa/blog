@@ -1,0 +1,38 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+ "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+ <head>
+
+     <title>{% block title %}{% endblock %}</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+  <meta name="Generator" content="Vim 7.1 (Vi IMproved editor; http://www.vim.org/)" />
+  <meta name="Author" content="Apkawa" />
+  <meta name="Copyright" content="Copyright (C) Апрель 17, 2009 " />
+  <link rev="made" href="mailto:" />
+  <link rel="stylesheet" type="text/css" href="/static/css/reset.css">
+  <link rel="stylesheet" type="text/css" href="/static/css/960.css">
+  <link rel="stylesheet" type="text/css" href="/static/css/text.css">
+  <style type="text/css">
+   <!--
+   body {background: #FFFFFF; color: #000000;}
+   a:link {color: #0000EE;}
+   a:visited {color: #990066;}
+   a:hover, a:active, a:focus {color: #FF0000;}
+   -->
+  </style>
+
+</head>
+ <body>
+     <div class="container_16">
+         <div id="head" class="grid_16">
+             <div id="logo"><h1>[apkawa]</h1></div>
+             <div id="main_menu">home | blog | about | contacts</div>
+             {% block head%}head{%endblock%}</div>
+         <div id="content" class="grid_11 prefix_1">{%block content%}Content{%endblock%}</div>
+         <div id="left_block" class="grid_4">
+             {% block left_block %}left_block{%endblock%}</div>
+         <div id="footer" class="grid_16">{% block footer %} footer{%endblock%}</div>
+     </div>
+ </body>
+</html>
