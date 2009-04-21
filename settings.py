@@ -88,4 +88,5 @@ INSTALLED_APPS = (
     'django.contrib.admin',
     'django.contrib.admindocs',
     'apkawa.blog',
+    'apkawa.blog.templatetags.typographus'
 )
