@@ -1,0 +1,177 @@
+body {
+    background: url('/static/images/design/stripe_3.png') #1c1c1c;
+    font: 13px/1.5, Arial;
+    color: #ddd;
+}
+a {
+    color: #ddd;
+}
+
+a:hover {
+    color: #B32D00;
+}
+a:active {
+    color: #B32D00;
+}
+
+a:visited {
+    color: #aaa;
+}
+
+h1 {
+    font-size: 35px;
+}
+h2 {
+    font-size: 25px;
+}
+
+h3 {
+    font-size: 20px;
+}
+
+h4 {
+    font-size: 20px;
+    /*text-transform: uppercase;*/
+}
+h5 {
+    font-size: 16px;
+}
+h6 {
+    font-size: 13px;
+}
+
+h1, h2, h3 {
+    font-family: Times New Roman;
+    border-bottom:1px solid #555;
+    margin-left: 20px;
+
+}
+ol, ul {
+    margin-left: 10px;
+
+}
+p,
+dl,
+hr,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ol,
+ul,
+pre,
+table,
+address,
+fieldset {
+	margin-bottom: 20px;
+}
+/* images */
+.post-body img { 
+    padding: 10px;
+    margin: 5px;
+    border: 1px solid #212121;
+    background-color: #191919;
+}
+
+.icon img {
+    margin-left: 5px;
+}
+
+/* blocks */
+#main {
+    background-color: #161616;
+    border: 10px solid #052129;
+}
+
+div#left_block {
+    border-top: 15px solid #222;
+}
+
+
+.post, .comment {
+    border: 1px solid #191919;
+    border-top: 15px solid #222;
+    margin-bottom: 10px;
+    padding: 10px;
+    background: url('/static/images/design/stripe_4.png') repeat;
+
+}
+/* post */
+
+.post-header {
+    border-bottom: 1px solid #666;
+    height: 40px;
+    margin-bottom: 20px;
+    padding: 0 10px 0 10px; 
+}
+.post-title {
+    font-family: Times New Roman;
+    font-size: 25px;
+    float: left;
+}
+.post-title a { color: #FFF;}
+
+.post-date {
+    float: right;
+}
+
+.post-footer {
+    font-size: 10px;
+    color: #999;
+    margin-top: 10px;
+    padding: 5px 10px 0 10px; 
+    border-top: 1px solid #666;
+}
+.post-footer-block-text {
+    margin-left: 10px;
+}
+
+/*
+.post-category {
+    background: url(/static/images/icons/folder-16.gif) no-repeat;
+    background-position: 0% 0%;
+    margin-left: 5px;
+    padding-left: 20px;
+}
+.post-tag {
+    background: url(/static/images/icons/tag-16.gif) no-repeat;
+    background-position: 0% 0%;
+    margin-left: 5px;
+    padding-left: 20px;
+}
+
+.post-comments {
+    background: url(/static/images/icons/comments-16.gif) no-repeat;
+    background-position: 0% 0%;
+    margin-left: 5px;
+    padding-left: 20px;
+}
+
+*/
+
+/* end post */
+
+/* comment style */
+.comment-header {
+    border-bottom: 1px solid #666;
+    height: 20px;
+    padding-bottom: 5px;
+
+}
+/* end comment */
+
+.float-left {
+    float: left;
+}
+.float-right {
+    float: right;
+}
+
+.align-left {
+    text-align: left;
+}
+.align-right {
+    text-align: right;
+}

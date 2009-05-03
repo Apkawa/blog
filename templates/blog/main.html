@@ -1,0 +1,9 @@
+{% extends "blog/base_blog.html" %}
+{% block content %}
+{% load post %}
+    {% for p in posts %}
+        {% make_post p "66" %}
+
+    {%endfor%}
+{% endblock %}
+

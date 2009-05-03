@@ -1,0 +1,16 @@
+main=/home/apkawa/Code/django/apkawa CD=. filter="*.py" {
+   __init__.py
+   admin.py
+   manage.py
+   settings.py
+   urls.py
+ blogapp=blog CD=. filter="*.py"{
+  __init__.py
+  models.py
+  urls.py
+  views.py
+  }
+ themplates=themplates CD=. filter="*.html" {
+   index.html
+ }
+ }

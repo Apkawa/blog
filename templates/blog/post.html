@@ -1,0 +1,38 @@
+{% extends "blog/base_blog.html" %}
+{% block content %}
+{% load post %}
+{% load pytils_dt%}
+{% make_post post %}
+<a name="c"></a>
+<h4>Comments ({{comments.count|default:"0"}})</h4>
+<ol>
+{% for comment in comments %}
+    <li>
+        <div class="comment">
+            <div class="comment-header">
+                <span class="float-left"> <b>{{comment.title}}</b></span>
+            <span class="float-right">
+                <img class="icon" src="/static/images/icons/user.png" alt="post date"/>
+                {{comment.author|default:"anonymous"}} 
+                <img class="icon" src="/static/images/icons/calendar.png" alt="post date"/>
+                {{comment.datetime_add|ru_strftime:"%d %B %Y"}}
+            </span>
+
+            </div>
+            <div class="comment-body">
+                <p>{{comment.body_html|safe}}</p>
+            </div>
+
+        </div>
+    </li>
+{% endfor %}
+</ol>
+<table>
+<form action="." method="post">
+<tr><td>title: {{ add_comment.title }}</td></tr>
+<tr><td>{{ add_comment.body }}</td></tr>
+<tr><td><input type="submit" value="send"></input></td></tr>
+</form>
+</table>
+{% endblock %}
+

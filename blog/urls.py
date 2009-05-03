@@ -2,12 +2,13 @@ from django.conf.urls.defaults import *
 
 # Uncomment the next two lines to enable the admin:
 
-urlpatterns = patterns('',
+urlpatterns = patterns('apkawa.blog.views',
     # Example:
     #(r'^post/', ),
-    (r'^$','apkawa.blog.views.main'),
-    (r'^(tag|category)/(\w{,256})/$','apkawa.blog.views.sorted'),
-    (r'^post/(\w{,256})/$','apkawa.blog.views.post'),
+    (r'^$','main'),
+    (r'^category/([-\w]{,256})/$','category'),
+    (r'^tag/(\d{1,4})/$','tag'),
+    (r'^post/([-\w]{,256})/$','post'),
 
 
     # Uncomment the admin/doc line below and add 'django.contrib.admindocs' 

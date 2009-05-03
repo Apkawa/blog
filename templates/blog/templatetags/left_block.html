@@ -1,0 +1,17 @@
+{% load tagging_tags %}
+<h2>Categores</h2>
+<ul>
+    {% for category in categorys %}
+    <li><a href="{% url blog.views.category category.slug %}">{{category}}</a> ({{ category.post_set.all.count }})</li>
+    {% endfor %}
+
+</ul>
+<h2>Tags</h2>
+{% tags_for_model blog.Post as post_tags with counts %}
+<ul>
+    {% for tag in post_tags %}
+    <li><a href="{% url blog.views.tag tag.id%}">{{ tag.name }} ({{ tag.count }})</a></li>
+    {%endfor%}
+</ul>
+
+

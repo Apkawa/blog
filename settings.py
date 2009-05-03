@@ -1,13 +1,13 @@
 # Django settings for apkawablog project.
 import os
 pwd = os.sys.path[0]
-pathsep = os.path.sep 
+pathsep = os.path.sep
 
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
 
 ADMINS = (
-    # ('Your Name', 'your_email@domain.com'),
+    ('apkawa', 'apkawa@gmail.com'),
 )
 
 MANAGERS = ADMINS
@@ -74,7 +74,7 @@ ROOT_URLCONF = 'apkawa.urls'
 TEMPLATE_DIRS = (
     #'G:/Documents/Code/apkawa/themplates',
     #os.environ['PWD']+'/themplates',
-    pwd+pathsep+'themplates',
+    pwd+pathsep+'templates',
     # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
@@ -88,5 +88,8 @@ INSTALLED_APPS = (
     'django.contrib.admin',
     'django.contrib.admindocs',
     'apkawa.blog',
-    'apkawa.blog.templatetags.typographus'
+    'apkawa.blog.templatetags.typographus',
+    'pytils',
+    'mptt',
+    'tagging',
 )
