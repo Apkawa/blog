@@ -4,7 +4,7 @@
 {% load pytils_dt%}
 {% make_post post %}
 <a name="c"></a>
-<h4>Comments ({{comments.count|default:"0"}})</h4>
+<h3>Comments ({{comments.count|default:"0"}})</h3>
 <ol>
 {% for comment in comments %}
     <li>
@@ -20,7 +20,7 @@
 
             </div>
             <div class="comment-body">
-                <p>{{comment.body_html|safe}}</p>
+                {{comment.body_html|safe}}
             </div>
 
         </div>
