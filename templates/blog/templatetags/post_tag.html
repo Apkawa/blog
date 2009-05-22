@@ -1,6 +1,7 @@
 {% load pytils_dt%}
     <div class="post">
         <div class="post-header">
+
             <span class="post-title"><a href="{% url blog.views.post post.slug %}">{{post.title}}</a></span>
             <div class="post-date">
                 <img class="icon" src="/static/images/icons/calendar.png" alt="post date" title="posted: {{ post.datetime_add|date:"r"}}"/>

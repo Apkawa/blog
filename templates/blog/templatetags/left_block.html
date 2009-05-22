@@ -1,4 +1,5 @@
 {% load tagging_tags %}
+<div class="grid_4 left_block">
 <h2>Categores</h2>
 <ul>
     {% for category in categorys %}
@@ -6,6 +7,8 @@
     {% endfor %}
 
 </ul>
+</div>
+<div class="grid_4 left_block">
 <h2>Tags</h2>
 {% tags_for_model blog.Post as post_tags with counts %}
 <ul>
@@ -13,5 +16,6 @@
     <li><a href="{% url blog.views.tag tag.id%}">{{ tag.name }} ({{ tag.count }})</a></li>
     {%endfor%}
 </ul>
+</div>
 
 

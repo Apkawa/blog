@@ -2,6 +2,7 @@ from django.db import models
 from apkawa import settings
 import mptt
 import tagging
+from django.template.defaultfilters import striptags
 
 def wiki2html(text):
     from creoleparser import text2html
@@ -12,6 +13,7 @@ def typograf(text):
     return typographus.typo( text )
 
 def make_text(text):
+    text = striptags( text )
     text = wiki2html( text )
     #text = typograf(text)
     return text
@@ -36,7 +38,6 @@ class Post( models.Model):
     def __unicode__(self):
         return self.title
     def save(self, *args, **kwargs):
-
         self.body_html = make_text( self.body_wiki )
         self.slug = title2slug( self.title )
         if not self.author:
@@ -75,10 +76,10 @@ class Tag( models.Model):
 class Comment( models.Model):
     title = models.CharField( max_length=256)
     body_wiki = models.TextField()
-    body_html = models.TextField()
+    body_html = models.TextField(blank=True,editable=False)
     author = models.ForeignKey('User', blank=True, null=True)
     post = models.ForeignKey('Post')
-    reply_to = models.ForeignKey('self', blank=True, null=True)
+    reply_to = models.ForeignKey('self', blank=True, null=True, editable=False)
     datetime_add = models.DateTimeField( auto_now = True)
 
     def __unicode__(self):

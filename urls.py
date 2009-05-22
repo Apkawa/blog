@@ -7,7 +7,7 @@ admin.autodiscover()
 
 urlpatterns = patterns('',
     # Example:
-    (r'^blog/', include('apkawa.blog.urls')),
+    (r'^', include('apkawa.blog.urls')),
 
     # Uncomment the admin/doc line below and add 'django.contrib.admindocs' 
     # to INSTALLED_APPS to enable admin documentation:
@@ -15,6 +15,8 @@ urlpatterns = patterns('',
 
     # Uncomment the next line to enable the admin:
      (r'^admin/(.*)', admin.site.root),
-
-     (r'^static/(?P<path>.*)$','django.views.static.serve',{'document_root': settings.STATIC_DOC_ROOT}),
+     )
+if settings.DEBUG:
+     urlpatterns += patterns('',
+(r'^static/(?P<path>.*)$','django.views.static.serve',{'document_root': settings.STATIC_DOC_ROOT}),
 )

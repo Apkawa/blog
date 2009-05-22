@@ -2,6 +2,7 @@
 from apkawa.blog.models import Post, User, Category, Tag, Comment
 from django.shortcuts import render_to_response
 from django.http import  HttpResponseRedirect
+from django.core.urlresolvers import reverse
 
 from django.forms import ModelForm
 from django import forms
@@ -34,7 +35,7 @@ def post(request, slug):
                 title = u'Re: %s'%post.title
 
             new_comment = Comment.objects.create( title=title, body_wiki=body, post=post )
-            return HttpResponseRedirect('/blog/post/%s/'%slug)
+            return HttpResponseRedirect( reverse('apkawa.blog.views.post',args=(slug,) ) )
 
 
     return render_to_response('blog/post.html',{'post':post, 'comments':comments, 'add_comment':form})

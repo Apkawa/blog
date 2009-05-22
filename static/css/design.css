@@ -1,10 +1,18 @@
+/*
+ bg1 - #101314
+ bg2 - #161A1C
+ border #0D434D
+ text color - #CEDEDE
+ link color - #4F6A73
+ */
 body {
-    background: url('/static/images/design/stripe_3.png') #1c1c1c;
-    font: 13px/1.5, Arial;
-    color: #ddd;
+    background: url('/static/images/design/stripe_4.png') #272F32;
+    font-size: 13px/1.5;
+    font-family: "Arial";
+    color: #CEDEDE;
 }
 a {
-    color: #ddd;
+    color: #CEDEDE;
 }
 
 a:hover {
@@ -42,6 +50,11 @@ h6 {
 
 h1, h2, h3 {
     font-family: Times New Roman;
+}
+
+.post h1, .comment h1,
+.post h2, .comment h2,
+.post h3, .comment h3 {
     border-bottom:1px solid #555;
     margin-left: 20px;
 
@@ -67,13 +80,28 @@ address,
 fieldset {
 	margin-bottom: 20px;
 }
-/* images */
-.post-body img { 
-    padding: 10px;
-    margin: 5px;
-    border: 1px solid #212121;
-    background-color: #191919;
+/* form */
+input, select, textarea, button {
+    color: #CEDEDE;
+    background-color: #161A1C;
+    border: 1px solid #0D434D;
+
 }
+
+/* end form*/
+
+
+/* images */
+a img {
+    border: none;
+}
+.post-body img, .comment-body img{ 
+    padding: 5px;
+    margin: 2px;
+    border: 1px solid #0D434D;
+    background-color: #101314;
+    max-width: 600px;
+} 
 
 .icon img {
     margin-left: 5px;
@@ -81,57 +109,54 @@ fieldset {
 
 /* blocks */
 #main {
-    background-color: #161616;
-    border: 10px solid #052129;
+
+    border-top: 15px solid #0D434D;
+    padding-top: 5px;
+    background-color: #101314;
 }
 
-div#left_block {
-    border-top: 15px solid #222;
-}
 
 #footer {
     margin-top: 15px;
-    border-top: 6px solid #151515;
+    padding-bottom: 5px;
     color: #666;
     text-align: center;
-    font-size: 10px;
+    font-size: 9px;
 }
 #footer a { color: #666;}
 
 
 .post, .comment {
-    border: 1px solid #191919;
-    border-top: 15px solid #222;
-    margin-bottom: 10px;
     padding: 10px;
-    background: url('/static/images/design/stripe_4.png') repeat;
+    /*background: url('/static/images/design/stripe_4.png') repeat;*/
 
 }
+
 /* post */
 
 .post-header {
-    border-bottom: 1px solid #666;
+    border-bottom: 1px solid #0D434D;
     height: 40px;
     margin-bottom: 20px;
-    padding: 0 10px 0 10px; 
 }
 .post-title {
     font-family: Times New Roman;
     font-size: 25px;
     float: left;
 }
-.post-title a { color: #FFF;}
+.post-title a { 
+    color: #FFF;
+}
 
 .post-date {
     float: right;
 }
 
 .post-footer {
-    font-size: 10px;
-    color: #999;
+    border-top: 1px solid #0D434D;
+    font-size: 9px;
     margin-top: 10px;
-    padding: 5px 10px 0 10px; 
-    border-top: 1px solid #666;
+    padding-top: 5px;
 }
 .post-footer-block-text {
     margin-left: 10px;
@@ -170,6 +195,34 @@ div#left_block {
 
 }
 /* end comment */
+
+/* left block */
+.left_block {
+    padding:0;
+    padding-left: 20px;
+    padding-top: 10px;
+    margin-left: -1px;
+    margin-right: -1px;
+}
+
+.left_block ul {
+    margin-left: 0;
+}
+.left_block ul li {
+    margin-bottom:5px;
+}
+/* end left block */
+
+
+
+.post, .comment, .left_block {
+    margin-bottom: 10px;
+    border: 1px solid #0D434D;
+    background-color: #161A1C;
+    border-top: 15px solid #0D434D;
+
+}
+
 
 .float-left {
     float: left;

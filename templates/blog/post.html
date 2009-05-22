@@ -1,10 +1,14 @@
 {% extends "blog/base_blog.html" %}
+{% block title %}
+{{post.title}}
+{% endblock %}
 {% block content %}
 {% load post %}
 {% load pytils_dt%}
 {% make_post post %}
 <a name="c"></a>
 <h3>Comments ({{comments.count|default:"0"}})</h3>
+{% if comments %}
 <ol>
 {% for comment in comments %}
     <li>
@@ -27,12 +31,13 @@
     </li>
 {% endfor %}
 </ol>
+{% endif %}
+<form action="{% url blog.views.post post.slug %}" method="post">
 <table>
-<form action="." method="post">
 <tr><td>title: {{ add_comment.title }}</td></tr>
 <tr><td>{{ add_comment.body }}</td></tr>
 <tr><td><input type="submit" value="send"></input></td></tr>
-</form>
 </table>
+</form>
 {% endblock %}
 

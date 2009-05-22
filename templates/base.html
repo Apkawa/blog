@@ -16,12 +16,16 @@
 
   <link rel="stylesheet" type="text/css" href="/static/css/design.css"/>
 
-
+  <script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-7049912-4");
+pageTracker._trackPageview();
+} catch(err) {}</script>
   
-  <style type="text/css">
-   <!--
-   -->
-  </style>
 
 </head>
  <body>
@@ -31,8 +35,11 @@
              <div id="main_menu"></div>
              {% block head%}{%endblock%}</div>
          <div id="content" class="grid_12">{%block content%}Content{%endblock%}</div>
-         <div id="left_block" class="grid_4">
-             {% block left_block %}left_block{%endblock%}</div>
+             {% block left_block %}
+         <div class="grid_4 left_block">
+             left_block
+         </div>
+             {%endblock%}
          <div id="footer" class="grid_16">
              © 2009 <a href="#">apkawa.org.ru</a>. Valid <a href="http://jigsaw.w3.org/css-validator/check/referer">CSS</a> &amp; <a href="http://validator.w3.org/check?uri=referer">XHTML</a>. Developered by <a href="mailto:apkawa@gmail.com">Apkawa</a> on <a href="http://djangoproject.com/">Django</a>
          </div>
